@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>下拉选择插件</title>
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+<div class="main" style="padding:20px 10%;">
+    <h1>单项选择</h1>
+    <input type="hidden" id="nextFollowUpMethod__c" >
+    <input type="text" placeholder="点击选择"  id="nextFollowUpMethod__c-1" onfocus='this.blur();' style="border: 1px solid #eaeaea;">
+    <br>
+    <h1>多项选择</h1>
+    <input type="hidden" id="lastFollowUpMethod__c" >
+    <input type="text" placeholder="点击选择"  id="lastFollowUpMethod__c-1" onfocus='this.blur();' style="border: 1px solid #eaeaea;">
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/downcheck.js"></script>
+<script type="text/javascript">
+    var data=[
+        {
+          "label": "主动去电",
+          "value": 1,
+        },
+        {
+          "label": "展厅接待",
+          "value": 2,
+        },
+        {
+          "label": "主动拜访",
+          "value": 3,
+        },
+        {
+          "label": "活动现场接待",
+          "value": 4,
+        },
+        {
+          "label": "客户来电",
+          "value": 5,
+        },
+        {
+          "label": "微信",
+          "value": 6,
+        },
+        {
+          "label": "短信",
+          "value": 7,
+        }
+      ];
+    downcheck(data,"#nextFollowUpMethod__c","#nextFollowUpMethod__c-1");
+    downcheck(data,"#lastFollowUpMethod__c","#lastFollowUpMethod__c-1",1);
+</script>
+</body>
+</html>
